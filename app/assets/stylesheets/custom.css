@@ -1,0 +1,31 @@
+
+body {
+    background-image: url("https://templates.cms-guide.com/40881/images/bg1.jpg");
+    font-family: 'Arial', sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    float: left;
+    margin-right: 20px;
+    font-size: 20px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    color: #f00;
+  }
