@@ -1,18 +1,19 @@
 <% provide(:title, "Home") %>
 <!DOCTYPE html>
 <html>
-    <head>
-        <title><%= yield(:title) %> | Luca's Pizza </title> 
-    </head>
-    <body>
-        <h1> Luca's Pizza </h1>
-        <div>
-            <ul>
-                <li><%= link_to "Home", "/static_pages/home" %></li>
-                <li><%= link_to "Help", "/static_pages/help" %></li>
-                <li><%= link_to "Menu", "/static_pages/menu" %></li>
-                <li><%= link_to "Drinks", "/static_pages/drinks" %></li>
-            </ul>
-        </div>
-    </body>
+  <head>
+    <title><%= yield(:title) %> | Luca's Pizza </title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <h1 class="logo"> Luca's Pizza </h1>
+    <nav class="nav">
+      <ul class="nav-menu">
+        <li class="nav-menu-item"><%= link_to "Home", home_path, class: "nav-menu-link" %></li>
+        <li class="nav-menu-item"><%= link_to "Help", help_path, class: "nav-menu-link" %></li>
+        <li class="nav-menu-item"><%= link_to "Menu", menu_path, class: "nav-menu-link" %></li>
+        <li class="nav-menu-item"><%= link_to "Drinks", drinks_path , class: "nav-menu-link" %></li>
+      </ul>
+    </nav>
+  </body>
 </html>
