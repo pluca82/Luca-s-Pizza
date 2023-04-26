@@ -11,6 +11,15 @@
         <%= javascript_tag 'application', 'data-turbolinks-track': 'reload' %>
     </head>
         <body>
+           <nav class="nav">
+      <ul class="nav-menu">
+        <li class="nav-menu-item"><%= link_to "Home", home_path, class: "nav-menu-link" %></li>
+        <li class="nav-menu-item"><%= link_to "Help", help_path, class: "nav-menu-link" %></li>
+        <li class="nav-menu-item"><%= link_to "Menu", menu_path, class: "nav-menu-link" %></li>
+        <li class="nav-menu-item"><%= link_to "Drinks", drinks_path , class: "nav-menu-link" %></li>
+        <li class="nav-menu-item"><%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %></li>
+
+      </ul>
         <div class = "container">
             <%= yield %>
             <%= render 'layouts/footer'%>

@@ -4,4 +4,12 @@ class StaticPagesController < ApplicationController
 
   def help
   end
+
+  def menu
+  end 
+
+  def drinks
+  end 
+
+  
 end

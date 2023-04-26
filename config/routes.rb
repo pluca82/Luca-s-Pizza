@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   get '/help', to: 'static_pages#help'
   get '/menu', to: 'static_pages#menu'
   get '/drinks', to: 'static_pages#drinks'
-  get 'signup', to: 'users#new'
+  get '/signup', to: 'users#new'
 end
