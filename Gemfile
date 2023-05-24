@@ -8,6 +8,7 @@ gem 'sass-rails'
 gem 'webpacker'
 gem 'turbolinks'
 gem 'jbuilder'
+gem 'sass-rails'
 gem 'bootsnap', require: false
 group :development, :test do
 gem 'sqlite3'

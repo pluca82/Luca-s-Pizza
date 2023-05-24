@@ -31,17 +31,18 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   opacity: 0.8;
   z-index: 1;
 }
+
 
 .nav::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("https://i.imgur.com/T1pJiRn.png");
   opacity: 0.1;
   z-index: -1;
 }
@@ -129,4 +130,79 @@ footer.footer ul.footer-links {
 footer.footer ul.footer-links li {
   float: left;
   margin-left: 15px;
+}
+
+/* signup form */
+
+.user-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  width: 30%;
+  position: absolute;
+  animation-name: formFadeIn;
+  animation-duration: 2s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes formFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.form-label {
+  font-size: 1em;
+  color: #495057;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-control {
+  height: 30px;
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  transition: all 0.3s ease-in-out;
+  font-size: 0.8em;
+  padding: 5px;
+}
+
+.form-control:focus {
+  border: 1px solid #495057;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+}
+
+.btn-block {
+  width: 100%;
+  height: 50px;
+  font-size: 1.2em;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.btn-block:hover {
+  background-color: #F61B1B;
+  color: #fff;
+}
+
+.text-center {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-top: 200px;
+  color: #F61B1B;
+}
+
+/* errors */
+#error_explanation {
+  color: red;
+}
+
+#error_explanation ul {
+  color: red;
+  margin: 0 0 30px 0;
 }
