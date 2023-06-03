@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def show
-    @user = User.find_by(params[:id])
+    @user = User.find(params[:id])
   end 
 
   def new
@@ -10,7 +10,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-
+      flash[:success] = "Welcome to Luca's Pizza"
+      redirect_to user_url(@user)
     else 
       render 'new'
     end 
