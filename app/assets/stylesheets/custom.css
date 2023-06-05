@@ -157,7 +157,8 @@ footer.footer ul.footer-links li {
   font-size: 1em;
   color: #495057;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
+  margin-top: 15px;
   display: block;
 }
 
@@ -205,4 +206,136 @@ footer.footer ul.footer-links li {
 #error_explanation ul {
   color: red;
   margin: 0 0 30px 0;
+}
+
+.alert {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.alert-danger {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d;
+}
+
+/* login form */
+
+.user-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  width: 30%;
+  position: absolute;
+  animation-name: formFadeIn;
+  animation-duration: 2s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes formFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.form-label {
+  font-size: 1em;
+  color: #495057;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-control {
+  height: 30px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  transition: all 0.3s ease-in-out;
+  font-size: 0.8em;
+  padding: 5px;
+}
+
+.form-control:focus {
+  border: 1px solid #495057;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+}
+
+.btn-block {
+  width: 100%;
+  height: 50px;
+  font-size: 1.2em;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.btn-block:hover {
+  background-color: #F61B1B;
+  color: #fff;
+}
+
+.text-center {
+  margin-top: 20px;
+  color: #F61B1B;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: absolute;
+  display: inline-block;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  z-index: 2;
+  right: 50px;
+}
+
+.dropdown-menu {
+  list-style: none;
+  display: none;
+  position: absolute;
+  background-color: #0083b0;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 0;
+  z-index: 1;
+  top: 100%;
+  border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.dropdown-menu li a:hover {
+  color: #FFD166;
+}
+
+.dropdown-toggle::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: -15px;
+  transform: translateY(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #fff;
 }

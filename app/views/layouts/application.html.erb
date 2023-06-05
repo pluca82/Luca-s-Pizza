@@ -6,25 +6,40 @@
         <meta charset="utf-8">
         <%= csrf_meta_tags %>
         <%= csp_meta_tag %>
-        <%= stylesheet_link_tag 'application', media: 'all',
-        'data-turbolinks-track': 'reload' %>
-        <%= javascript_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     </head>
-        <body>
-          <div class="navbar">
+    <body>
+        <h1 class="logo"> Luca's Pizza </h1>
+        <div class="navbar">
             <nav class="nav">
-              <ul class="nav-menu">
-                <li class="nav-menu-item"><%= link_to "Home", home_path, class: "nav-menu-link" %></li>
-                <li class="nav-menu-item"><%= link_to "Help", help_path, class: "nav-menu-link" %></li>
-                <li class="nav-menu-item"><%= link_to "Menu", menu_path, class: "nav-menu-link" %></li>
-                <li class="nav-menu-item"><%= link_to "Drinks", drinks_path , class: "nav-menu-link" %></li>
-                <li class="nav-menu-item"><%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %></li>
-              </ul>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><%= link_to "Home", home_path, class: "nav-menu-link" %></li>
+                    <li class="nav-menu-item"><%= link_to "Help", help_path, class: "nav-menu-link" %></li>
+                    <li class="nav-menu-item"><%= link_to "Menu", menu_path, class: "nav-menu-link" %></li>
+                    <li class="nav-menu-item"><%= link_to "Drinks", drinks_path , class: "nav-menu-link" %></li>
+                    <% if logged_in? %>
+                        <li class="dropdown nav-menu-item">
+                            <a href="#" class="dropdown-toggle nav-menu-link" data-toggle="dropdown">
+                                Account <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><%= link_to "My Orders", '#' %></li>
+                                <li><%= link_to "Settings", '#' %></li>
+                                <li><%= link_to "Log out", logout_path, method: :delete %></li>
+                            </ul>
+                        </li>
+                    <% else %>
+                        <li class="nav-menu-item"><%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %></li>
+                    <% end %>
+                </ul>
             </nav>
-          </div>
-        <div class = "container">
+        </div>
+        <div class="container">
+            <% flash.each do |message_type, message| %>
+                <div class="alert alert-<%= message_type %>"><%= message %></div>
+            <% end %>
             <%= yield %>
             <%= render 'layouts/footer'%>
         </div>
-        </body>
+    </body>
 </html>
