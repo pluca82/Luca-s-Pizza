@@ -286,6 +286,45 @@ footer.footer ul.footer-links li {
   color: #F61B1B;
 }
 
+/* checkbox */
+
+.checkbox label {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 0.8em;
+  color: #495057;
+}
+
+.checkbox label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ced4da;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.checkbox label:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background-color: #495057;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.checkbox input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+
 /* Dropdown Menu */
 .dropdown {
   position: absolute;
