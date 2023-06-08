@@ -10,7 +10,7 @@ class User < ApplicationRecord
 
   has_secure_password
 
-  validates :password, presence: true, length: { minimum: 6 }
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true 
 
   # Defines a method to digest a string using BCrypt.
   def self.digest(string)
@@ -34,6 +34,6 @@ class User < ApplicationRecord
   end 
 
   def forget
-    update_attribute(:remember_digest,nil)
+    update_attribute(:remember_digest, nil)
   end 
 end
